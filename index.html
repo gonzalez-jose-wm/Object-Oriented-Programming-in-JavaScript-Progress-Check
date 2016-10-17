@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LetsLearn.com</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <style>
+        .navbar {
+            margin-bottom: 50px;
+            border-radius: 0;
+        }
+
+        .jumbotron {
+            margin-bottom: 0;
+        }
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            min-height: 45px;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body onload="main()">
+    <div class="jumbotron">
+        <div class="container text-center">
+            <h1 style="text-shadow: 4px 4px 6px rgba(0,0,0,0.91);color: #337ab7;">Computers!</h1>
+            <p>Let's Do OOP With Computers</p>
+            <button id="genericTable" class="btn btn-primary btn-md" type="button" name="button">Show Example!</button>
+        </div>
+    </div>
+
+    <div id="showGeneric" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="text-center">
+                <div class="panel panel-primary panel-pricing">
+                    <button type="button" class="close" data-dismiss="modal">x</button>
+                    <div class="panel-heading">
+                        <h3 id="brandGeneric"></h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <p>Cost: <strong><span id="priceGeneric"></span></strong></p>
+                    </div>
+                    <ul class="list-group text-center">
+                        <li class="list-group-item">Hard Drive Type: <strong><span id="hardDriveGeneric"></span></strong></li>
+                        <li class="list-group-item">RAM Type: <strong><span id="ramGeneric"></span></strong></li>
+                        <li class="list-group-item">CPU Type: <strong><span id="cpuGeneric"></span></strong></li>
+                    </ul>
+                    <div class="panel-footer">
+                        <a class="btn btn-block btn-primary" disabled="disabled">Buy Now!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Apple</div>
+                    <div class="panel-body"><img src="http://store.storeimages.cdn-apple.com/4973/as-images.apple.com/is/image/AppleInc/aos/published/images/M/AC/MACBOOKPRO/MACBOOKPRO?wid=1200&hei=630&fmt=jpeg&qlt=95&op_sharpen=0&resMode=bicub&op_usm=0.5,0.5,0,0&iccEmbed=0&layer=comp&.v=jBFkr3"
+                            class="img-responsive" style="width:100%;height: 10em;" alt="Image"></div>
+                    <div class="panel-footer">Macbook Pro <button id="appleTable" class="btn btn-primary btn-sm" type="button" name="button">Show</button></div>
+                </div>
+
+                <div id="showApple" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="text-center">
+                            <div class="panel panel-primary panel-pricing">
+                                <button type="button" class="close" data-dismiss="modal">x</button>
+                                <div class="panel-heading">
+                                    <h3 id="brandApple"></h3>
+                                </div>
+                                <div class="panel-body text-center">
+                                    <p>Cost: <strong><span id="priceApple"></span></strong></p>
+                                </div>
+                                <ul class="list-group text-center">
+                                    <li class="list-group-item">Hard Drive Type: <strong><span id="hardDriveApple"></span></strong></li>
+                                    <li class="list-group-item">RAM Type: <strong><span id="ramApple"></span></strong></li>
+                                    <li class="list-group-item">CPU Type: <strong><span id="cpuApple"></span></strong></li>
+                                    <li class="list-group-item">GPU Type: <strong><span id="gpuApple"></span></strong></li>
+                                </ul>
+                                <div class="panel-footer">
+                                    <a class="btn btn-block btn-primary" disabled="disabled">Buy Now!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Microsoft</div>
+                    <div class="panel-body"><img src="http://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c05095989.png" class="img-responsive" style="width:100%;height: 10em;" alt="Image"></div>
+                    <div class="panel-footer">HP - Pavilion <button id="microsoftTable" class="btn btn-primary btn-sm" type="button" name="button">Show</button></div>
+                </div>
+                <div id="showMicrosoft" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="text-center">
+                            <div class="panel panel-primary panel-pricing">
+                                <button type="button" class="close" data-dismiss="modal">x</button>
+                                <div class="panel-heading">
+                                    <h3 id="brandMicrosoft"></h3>
+                                </div>
+                                <div class="panel-body text-center">
+                                    <p>Cost: <strong><span id="priceMicrosoft"></span></strong></p>
+                                </div>
+                                <ul class="list-group text-center">
+                                    <li class="list-group-item">Hard Drive Type: <strong><span id="hardDriveMicrosoft"></span></strong></li>
+                                    <li class="list-group-item">RAM Type: <strong><span id="ramMicrosoft"></span></strong></li>
+                                    <li class="list-group-item">CPU Type: <strong><span id="cpuMicrosoft"></span></strong></li>
+                                    <li class="list-group-item">GPU Type: <strong><span id="gpuMicrosoft"></span></strong></li>
+                                    <li class="list-group-item">Color Type: <strong><span id="colorMicrosoft"></span></strong></li>
+                                </ul>
+                                <div class="panel-footer">
+                                    <a class="btn btn-block btn-primary" disabled="disabled">Buy Now!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Asus</div>
+                    <div class="panel-body"><img src="http://www.asus.com/Microsite/rog/GR8_G20/Theme/Image/GR8-04-main.png" class="img-responsive" style="width:100%;height: 10em;" alt="Image"></div>
+                    <div class="panel-footer">Asus - ROG <button id="asusTable" class="btn btn-primary btn-sm" type="button" name="button">Show</button></div>
+                </div>
+                <div id="showAsus" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="text-center">
+                            <div class="panel panel-primary panel-pricing">
+                                <button type="button" class="close" data-dismiss="modal">x</button>
+                                <div class="panel-heading">
+                                    <h3 id="brandAsus"></h3>
+                                </div>
+                                <div class="panel-body text-center">
+                                    <p>Cost: <strong><span id="priceAsus"></span></strong></p>
+                                </div>
+                                <ul class="list-group text-center">
+                                    <li class="list-group-item">Hard Drive Type: <strong><span id="hardDriveAsus"></span></strong></li>
+                                    <li class="list-group-item">RAM Type: <strong><span id="ramAsus"></span></strong></li>
+                                    <li class="list-group-item">CPU Type: <strong><span id="cpuAsus"></span></strong></li>
+                                    <li class="list-group-item">GPU Type: <strong><span id="gpuAsus"></span></strong></li>
+                                    <li class="list-group-item">Monitor: <strong><span id="monitorAsus"></span></strong></li>
+                                </ul>
+                                <div class="panel-footer">
+                                    <a class="btn btn-block btn-primary" disabled="disabled">Buy Now!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">iBUYPOWER</div>
+                    <div class="panel-body"><img src="https://images-na.ssl-images-amazon.com/images/I/51Oj8vpupJL._AC_US160_.jpg" class="img-responsive" style="width:100%;height: 10em;" alt="Image"></div>
+                    <div class="panel-footer">iBUYPOWER - Desktop <button id="buyPowerTable" class="btn btn-primary btn-sm" type="button" name="button">Show</button></div>
+                </div>
+                <div id="showBuyPower" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="text-center">
+                            <div class="panel panel-primary panel-pricing">
+                                <button type="button" class="close" data-dismiss="modal">x</button>
+                                <div class="panel-heading">
+                                    <h3 id="brandBuyPower"></h3>
+                                </div>
+                                <div class="panel-body text-center">
+                                    <p>Cost: <strong><span id="priceBuyPower"></span></strong></p>
+                                </div>
+                                <ul class="list-group text-center">
+                                    <li class="list-group-item">Hard Drive Type: <strong><span id="hardDriveBuyPower"></span></strong></li>
+                                    <li class="list-group-item">RAM Type: <strong><span id="ramBuyPower"></span></strong></li>
+                                    <li class="list-group-item">CPU Type: <strong><span id="cpuBuyPower"></span></strong></li>
+                                    <li class="list-group-item">GPU Type: <strong><span id="gpuBuyPower"></span></strong></li>
+                                    <li class="list-group-item">Color Type: <strong><span id="colorBuyPower"></span></strong></li>
+                                    <li class="list-group-item">Mouse: <strong><span id="mouseBuyPower"></span></strong></li>
+                                    <li class="list-group-item">Keyboard: <strong><span id="keyboardBuyPower"></span></strong></li>
+                                    <li class="list-group-item">Monitor: <strong><span id="monitorBuyPower"></span></strong></li>
+                                </ul>
+                                <div class="panel-footer">
+                                    <a class="btn btn-block btn-primary" disabled="disabled">Buy Now!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="container-fluid text-center">
+        <p><b>LetsLearn.com</b></p>
+    </footer>
+</body>
+<script>
+    $(document).ready(function() {
+        $('#genericTable').click(function() {
+            $('#showGeneric').modal('show');
+        });
+    });
+
+    $(document).ready(function() {
+        $('#appleTable').click(function() {
+            $('#showApple').modal('show');
+        });
+    });
+
+    $(document).ready(function() {
+        $('#microsoftTable').click(function() {
+            $('#showMicrosoft').modal('show');
+        });
+    });
+
+    $(document).ready(function() {
+        $('#asusTable').click(function() {
+            $('#showAsus').modal('show');
+        });
+    });
+
+    $(document).ready(function() {
+        $('#buyPowerTable').click(function() {
+            $('#showBuyPower').modal('show');
+        });
+    });
+</script>
+
+</html>
